@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                x:Class="MauiExercises.Views.Lesson05.ListViewExercise1"
+                Padding = "20"
+                Title="ListViewExercise1">
+    <StackLayout>
+        <ListView x:Name="DataModelList"  ItemTapped="ListViewItemTapped" >
+		    <ListView.ItemTemplate>
+			    <DataTemplate>
+				    <TextCell Text="{Binding Name}" Detail="{Binding Population}"/>
+			    </DataTemplate>
+		    </ListView.ItemTemplate>
+	    </ListView>
+        <Border Margin="5" Padding="20" Stroke="#C49B33" StrokeThickness="4">
+            <StackLayout>
+                <Button Text="ListView2" Clicked="Button_Clicked" />
+                <Button Text="Menu" Clicked="Button_Clicked_1" />
+            </StackLayout>
+        </Border>
+    </StackLayout>
+</ContentPage>

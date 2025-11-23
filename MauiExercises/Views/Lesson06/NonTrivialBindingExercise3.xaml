@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiExercises.Views.Lesson06.NonTrivialBindingExercise3">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout>
+                <Label Text="{Binding SliderValue}"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand" />
+                <Slider Minimum="0" Maximum="1" Value ="{Binding SliderValue}" />
+            </StackLayout>
+            <StackLayout>
+                <Label Text="{Binding StepperValue}"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand" />
+                <Stepper Minimum="0" Maximum="10" Increment="1" Value ="{Binding StepperValue}" />
+            </StackLayout>
+            <StackLayout>
+                <Button Text="Set Middle" Command="{Binding SetMiddleCommand}"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

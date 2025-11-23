@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+x:Class="MauiExercises.Views.Lesson03.ScrollViewExercise"
+Title="ScrollView Demo - XAML">
+	<ContentPage.Content>
+
+        <!-- To engage Scrolling Modify Orientation, VerticalScrollBarVisibility, HorizontalScrollBarVisibility -->
+        <!--
+        <ScrollView>
+        -->
+
+            <StackLayout>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="200"/>
+                        <RowDefinition Height="400"/>
+                        <RowDefinition Height="200"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="200" />
+                        <ColumnDefinition Width="400" />
+                        <ColumnDefinition Width="200" />
+                    </Grid.ColumnDefinitions>
+                    <StackLayout BackgroundColor="Green" Grid.Row="0" Grid.Column="0">
+                        <Label Text="Top Left" FontSize="20" />
+                    </StackLayout>
+                    <StackLayout BackgroundColor="Salmon" Grid.Row="0" Grid.Column="2">
+                        <Label Text="Top Right" FontSize="20" />
+                    </StackLayout>
+                    <StackLayout BackgroundColor="Purple" Grid.Row="0" Grid.Column="1" Grid.RowSpan="3">
+                        <Label Text="One Column in the middle" HorizontalOptions="Center" FontSize="20" />
+                    </StackLayout>
+                    <StackLayout BackgroundColor="Yellow" Grid.Row="1" Grid.ColumnSpan="3">
+                        <Label Text="One Row in the middle" FontSize="20" HorizontalOptions="Center" />
+                    </StackLayout>
+                    <StackLayout BackgroundColor="SaddleBrown" Grid.Row="2" Grid.Column="0">
+                        <Label Text="Bottom Left" FontSize="20" />
+                    </StackLayout>
+                    <StackLayout BackgroundColor="IndianRed" Grid.Row="2" Grid.Column="2">
+                        <Label Text="Bottom Right" FontSize="20" />
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+        <!-- To engage Scrolling 
+        </ScrollView>
+        -->
+
+    </ContentPage.Content>
+</ContentPage>

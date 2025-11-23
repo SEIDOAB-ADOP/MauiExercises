@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiExercises.Views.Lesson02.BindingExercise1"
+             Title="BindingExercise1">
+    <StackLayout Padding="10, 0">
+        <Border Margin="5" Padding="20" Stroke="#C49B33" StrokeThickness="4" >
+            <StackLayout Orientation="Horizontal">
+                <StackLayout HeightRequest="300" WidthRequest="300">
+                    <BoxView Color="Blue" 
+                          Rotation= "0"
+                          HeightRequest= "100"
+                          WidthRequest= "100"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical" Padding="20">
+                    <Slider x:Name="slWidth" WidthRequest="200" Minimum="50" Maximum="300"></Slider>
+                    <Slider x:Name="slHeight" WidthRequest="200" Minimum="50" Maximum="300"></Slider>
+                    <Slider x:Name="slRotation" WidthRequest="200" Minimum="0" Maximum="360"></Slider>
+                </StackLayout>
+            </StackLayout>
+        </Border>
+    </StackLayout>
+</ContentPage>

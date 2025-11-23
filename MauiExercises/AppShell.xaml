@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MauiExercises.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MauiExercises"
+    xmlns:views="clr-namespace:MauiExercises.Views"
+    Shell.FlyoutBehavior="Flyout"
+    Title="ADOP MAUI Exercises">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+    <ShellContent
+    Title="Lesson 2"
+    ContentTemplate="{DataTemplate views:Lesson02a}"
+    Route="lesson2" />
+    <ShellContent
+    Title="Lesson 3"
+    ContentTemplate="{DataTemplate views:Lesson03a}"
+    Route="lesson3" />
+    <ShellContent
+    Title="Lesson 4"
+    ContentTemplate="{DataTemplate views:Lesson04a}"
+    Route="lesson4" />
+    <ShellContent
+    Title="Lesson 5"
+    ContentTemplate="{DataTemplate views:Lesson05a}"
+    Route="lesson5" />
+
+
+    <!-- Exercise ShellMenu: Adding an item to a Shell Menu in Xaml-->
+    <!-- Fill in the <ShellContent /> tag
+    <ShellContent />
+    Set the Route to "lesson5news1"
+    -->    
+    
+    <!-- Exercise ShellMenu: Adding an item to a Shell Menu in C#-->
+    <FlyoutItem x:Name="lesson5news2" Title="Lesson 5 News2" Route="lesson5news2">
+    </FlyoutItem>
+
+    <ShellContent
+    Title="Lesson 6"
+    ContentTemplate="{DataTemplate views:Lesson06a}"
+    Route="lesson6" />
+
+</Shell>

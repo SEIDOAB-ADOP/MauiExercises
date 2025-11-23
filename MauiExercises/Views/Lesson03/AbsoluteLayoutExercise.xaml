@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                x:Class="MauiExercises.Views.Lesson03.AbsoluteLayoutExercise"
+                Title="Absolute Layout Exploration - XAML">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <Label Text="I'm at top center on every device." AbsoluteLayout.LayoutBounds="0.5, 0.1, 200, 50" 
+                   AbsoluteLayout.LayoutFlags="PositionProportional" FontSize="20" HorizontalOptions="Center" LineBreakMode="WordWrap"  />
+            <Label Text="I'm bottom center on every device." AbsoluteLayout.LayoutBounds="0.5,0.9,0.5, 0.03" 
+                   AbsoluteLayout.LayoutFlags="All" FontSize="20" HorizontalOptions="Center" LineBreakMode="WordWrap"  />
+            <BoxView Color="Bisque"  AbsoluteLayout.LayoutBounds="1,0.5, 25, 100" AbsoluteLayout.LayoutFlags="PositionProportional" />
+            <BoxView Color="Red" AbsoluteLayout.LayoutBounds="0,0.5,25,100" AbsoluteLayout.LayoutFlags="PositionProportional" />
+            <BoxView Color="Blue" AbsoluteLayout.LayoutBounds="0.5,0,100,25" AbsoluteLayout.LayoutFlags="PositionProportional" />
+            <Label Text="I'm in the center on every device.But my height varies" AbsoluteLayout.LayoutBounds="0.5, 0.5, 0.5, 0.03" 
+                   AbsoluteLayout.LayoutFlags="All" FontSize="20" HorizontalOptions="Center" LineBreakMode="WordWrap"  />
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

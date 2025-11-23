@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                x:Class="MauiExercises.Views.Lesson04.StateManagement1"
+                Padding = "20"
+                Title="StateManagement1">
+    <ScrollView>
+    <StackLayout Spacing="30">
+        <Border Margin="5" Padding="20" Stroke="#C49B33" StrokeThickness="4" HeightRequest="200">
+                <ListView ItemsSource="{Binding myFriends}">
+		    <ListView.ItemTemplate>
+			    <DataTemplate>
+				    <TextCell Text="{Binding FullName}" Detail="{Binding FavoriteColor.FriendlyName}"/>
+			    </DataTemplate>
+		    </ListView.ItemTemplate>
+	    </ListView>
+        </Border>
+
+        <Border Margin="5" Padding="20" Stroke="#C49B33" StrokeThickness="4" HeightRequest="100">
+            <ListView x:Name="lvCities">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Name}" Detail="{Binding Continent}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        </Border>
+
+        <Border Margin="5" Padding="20" Stroke="#C49B33" StrokeThickness="4" HeightRequest="100">
+            <ListView x:Name="lvColors">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding FriendlyName}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+         </ListView>
+        </Border>
+    </StackLayout>
+    </ScrollView>
+</ContentPage>

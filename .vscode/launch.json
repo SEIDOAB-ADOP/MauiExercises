@@ -1,0 +1,38 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": ".NET MAUI - macCatalyst",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build-maccatalyst",
+      "program": "${workspaceFolder}/MauiExercises/bin/Debug/net9.0-maccatalyst/maccatalyst-arm64/MauiExercises.app/Contents/MacOS/MauiExercises",
+      "args": [],
+      "cwd": "${workspaceFolder}/MauiExercises",
+      "stopAtEntry": false,
+      "console": "internalConsole"
+    },
+    {
+      "name": ".NET MAUI - win-arm64",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build-windows-arm64",
+      "program": "${workspaceFolder}/MauiExercises/bin/Debug/net9.0-windows10.0.19041.0/win10-arm64/MauiExercises.exe",
+      "args": [],
+      "cwd": "${workspaceFolder}/MauiExercises",
+      "stopAtEntry": false,
+      "console": "internalConsole"
+    },
+    {
+      "name": ".NET MAUI - win-x64",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build-windows-x64",
+      "program": "${workspaceFolder}/MauiExercises/bin/Debug/net9.0-windows10.0.19041.0/win10-x64/MauiExercises.exe",
+      "args": [],
+      "cwd": "${workspaceFolder}/MauiExercises",
+      "stopAtEntry": false,
+      "console": "internalConsole"
+    }
+  ]
+}

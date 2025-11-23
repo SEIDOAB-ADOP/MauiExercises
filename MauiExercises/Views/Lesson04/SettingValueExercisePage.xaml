@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiExercises.Views.Lesson04.SelectingValueExercisePage"
+             xmlns:models="clr-namespace:MauiExercises.Models"
+             Title="Selecting Value Exercise"
+             Padding="10">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Grid ColumnSpacing="20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Event handling" Grid.Row="0" Grid.Column="0" FontAttributes="Bold" FontSize="Large"/>
+
+                <Label Text="Property Changed Event" Grid.Row="1" Grid.Column="0" FontAttributes="Bold"/>
+                <Label x:Name="lblPropChanged" 
+                       Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="1"/>
+
+                <Label Text="Other Event" Grid.Row="2" Grid.Column="0" FontAttributes="Bold"/>
+                <Label x:Name="lblOtherChanged" 
+                       Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="1"/>
+
+                <Label Text="Data Binding" Grid.Row="3" Grid.Column="0" FontAttributes="Bold" FontSize="Large"/>
+                <Label Text="Element" Grid.Row="4" Grid.Column="0" FontAttributes="Bold"/>
+                <Label Text="Xaml binding" Grid.Row="4" Grid.Column="1" FontAttributes="Bold"/>
+
+                <CheckBox x:Name="checkbox"
+                       Grid.Row="5" Grid.Column="0" PropertyChanged="checkbox_PropertyChanged"/>
+                <Label Text="{Binding Source={x:Reference checkbox}, Path=IsChecked, StringFormat='Switch value is {0}'}" 
+                       Grid.Row="5" Grid.Column="1"/>
+
+                <!--Implement ValueChanged event -->
+                <Slider x:Name="slider" Minimum="0" Maximum="100" Value="50"
+                        Grid.Row="6" Grid.Column="0" PropertyChanged="slider_PropertyChanged"/>
+                <Label Text="{Binding Source={x:Reference slider}, Path=Value, StringFormat='Slider value is {0:F1}'}"
+                       Grid.Row="6" Grid.Column="1"/>
+
+                <!--Implement ValueChanged event -->
+                <Stepper x:Name="stepper" Minimum="0" Maximum="10" Increment="0.1"  
+                       VerticalOptions="CenterAndExpand" PropertyChanged="stepper_PropertyChanged"
+                       Grid.Row="7" Grid.Column="0"/>
+                <Label Text="{Binding Source={x:Reference stepper}, Path=Value, StringFormat='Stepper value is {0:F1}'}"
+                        Grid.Row="7" Grid.Column="1"/>
+
+                <Switch x:Name="switch" 
+                        Grid.Row="8" Grid.Column="0" PropertyChanged="switch_PropertyChanged"/>
+                <Label  Text="{Binding Source={x:Reference switch}, Path=IsToggled, StringFormat='Switch value is {0}'}" 
+                        Grid.Row="8" Grid.Column="1"/>
+
+                <!--Implement DateSelected event -->
+                <DatePicker x:Name="picDate" Format="d"
+                        Grid.Row="9" Grid.Column="0" PropertyChanged="DatePicker_PropertyChanged"/>
+                <Label  Text="{Binding Source={x:Reference picDate}, Path=Date, StringFormat='Date value is {0:d}'}" 
+                        Grid.Row="9" Grid.Column="1"/>
+
+                <TimePicker x:Name="picTime" Format="T"
+                        Grid.Row="10" Grid.Column="0" PropertyChanged="TimePicker_PropertyChanged"  />
+                <Label  Text="{Binding Source={x:Reference picTime}, Path=Time, StringFormat='Time value is {0:T}'}" 
+                        Grid.Row="10" Grid.Column="1"/>
+
+                <Picker x:Name="picker"
+                        Grid.Row="11" Grid.Column="0" SelectedIndexChanged="picker_SelectedIndexChanged"
+                        PropertyChanged="picker_PropertyChanged"/>
+                <Label  Text="{Binding Source={x:Reference picker}, Path=SelectedItem, StringFormat='Picer value is {0}'}" 
+                        Grid.Row="11" Grid.Column="1"/>
+
+                <VerticalStackLayout Grid.Row="12" Grid.Column="0" >
+                    <Label>Show color:</Label>
+                </VerticalStackLayout>
+                <BoxView x:Name="bwPropChanged" WidthRequest="50" HeightRequest="50"
+                         Grid.Row="12" Grid.Column="1" HorizontalOptions="Start"/>
+
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

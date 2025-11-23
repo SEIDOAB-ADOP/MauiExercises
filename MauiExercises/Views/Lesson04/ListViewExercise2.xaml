@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                x:Class="MauiExercises.Views.Lesson04.ListViewExercise2"
+                Padding="20"
+                Title="ListViewExercise2">
+    <StackLayout>
+        <ListView x:Name="ImageList">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal" Padding="25,10,55,15">
+                            <StackLayout HorizontalOptions="StartAndExpand" Orientation="Vertical" Padding="5">
+                                <Label HorizontalOptions="Start" FontSize="20" Text="{Binding Name}"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

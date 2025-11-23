@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+ 			 xmlns:viewmodels="clr-namespace:MauiExercises.ViewModels"
+             x:Class="MauiExercises.Views.Lesson03a"
+             Padding="5,0"
+             Title="Lesson 3">
+    <VerticalStackLayout>
+        <ListView ItemsSource="{x:Static viewmodels:Lesson03aViewModel.All}"
+			  ItemSelected="OnListViewItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Title}"
+                          Detail="{Binding Description}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </VerticalStackLayout>
+</ContentPage>

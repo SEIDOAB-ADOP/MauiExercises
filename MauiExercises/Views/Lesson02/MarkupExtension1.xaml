@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:consts="clr-namespace:MauiExercises.Globals"
+             
+             x:Class="MauiExercises.Views.Lesson02.MarkupExtension1"
+             Title="MarkupExtension1">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+            <Label 
+            Text="Welcome to .NET MAUI!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+            <StackLayout Orientation="Horizontal">
+                <StackLayout Orientation="Vertical">
+                    <Label Text="{x:Static consts:AppConstants.Platform}">
+                        <Label.FontSize>
+                            <x:Static Member="consts:AppConstants.NormalFontSize"/>
+                        </Label.FontSize>
+                    </Label>
+                    <Label FontSize="{x:Static consts:AppConstants.NormalFontSize}">
+                        <Label.Text>
+                            <x:Static Member="consts:AppConstants.Idiom"/>
+                        </Label.Text>
+                    </Label>
+                </StackLayout>
+                <StackLayout Orientation="Vertical">
+                    <Button Clicked="Button_Clicked_1" Text="Button1" FontSize="{x:Static consts:AppConstants.NormalFontSize}"/>
+                    <Button Clicked="Button_Clicked_2">
+                        <Button.Text>Button2</Button.Text>
+                        <Button.FontSize>
+                            <x:Static Member="consts:AppConstants.NormalFontSize"/>
+                        </Button.FontSize>
+                    </Button>
+                </StackLayout>
+            </StackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

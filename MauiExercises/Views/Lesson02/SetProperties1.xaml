@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiExercises.Views.Lesson02.SetProperties1"
+             Title="SetProperties1">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+            <Label 
+            Text="Welcome to .NET MAUI!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+            
+            <BoxView x:Name="lblColorBox" HeightRequest="200"></BoxView>
+            <Button Text="Change Color"></Button>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

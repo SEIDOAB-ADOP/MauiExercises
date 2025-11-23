@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiExercises.Views.Lesson06.NonTrivialBindingExercise1">
+    <ContentPage.Content>
+        <StackLayout Spacing="20" >
+            <Border Margin="5" Padding="20" Stroke="#C49B33" StrokeThickness="4" >
+                <StackLayout>
+                    <Label Text="Step1 and Step2 here"/>
+                    <StackLayout>
+                        <!-- Step 1 begin -->
+                        <Label Text=""
+                            VerticalOptions="CenterAndExpand" 
+                            HorizontalOptions="CenterAndExpand" />
+                        <Slider Minimum="0" Maximum="1" Value="0.2" />
+
+                        <Label Text=""
+                            VerticalOptions="CenterAndExpand" 
+                            HorizontalOptions="CenterAndExpand" />
+                        <Stepper Minimum="0" Maximum="10" Increment="1" Value="2" />
+                        <!-- Step 1 end -->
+
+                        <!-- Step 2 begin -->
+                        <Button Text="Set to middle"/>
+                        <!-- Step 2 end -->
+                    </StackLayout>
+                </StackLayout>
+            </Border>
+            <Border Margin="5" Padding="20" Stroke="#C49B33" StrokeThickness="4">
+                <StackLayout>
+                    <StackLayout>
+                        <Label Text="Step3 to Step5 here"/>
+                        <!-- Step 3 begin -->
+                        <Label Text=""
+                            VerticalOptions="CenterAndExpand" 
+                            HorizontalOptions="CenterAndExpand" />
+                        <Slider Minimum="0" Maximum="1" />
+
+                        <Label Text=""
+                            VerticalOptions="CenterAndExpand" 
+                            HorizontalOptions="CenterAndExpand" />
+                        <Stepper Minimum="0" Maximum="10" Increment="1" />
+                        <!-- Step 3  end -->
+
+                        <!-- Step 5 begin -->
+                        <Button Text="Set to middle"/>
+                        <!-- Step 5 end -->
+
+                        <Button Text="Check Instance Values" Clicked="Button_Clicked_2" />
+                    </StackLayout>
+                </StackLayout>
+            </Border>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                x:Class="MauiExercises.Views.Lesson04.ListViewExercise4"
+                Padding="20"
+                Title="ListViewExercise4">
+    <StackLayout>
+        <ListView x:Name="CustomGroupedList" HasUnevenRows="true" ItemTapped="ListViewItemTapped">
+            <ListView.GroupHeaderTemplate>
+                <DataTemplate>
+                    <ViewCell Height="40">
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.GroupHeaderTemplate>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal" Padding="5,10,5,15">
+                            <StackLayout HorizontalOptions="Start" Orientation="Vertical" Padding="3">
+                                <Image Source="{Binding ImageSrc}" HorizontalOptions="FillAndExpand" WidthRequest="100"/>
+                            </StackLayout>
+                            <StackLayout HorizontalOptions="Start" Orientation="Vertical">
+                                <Label HorizontalOptions="Start" FontSize="20" FontAttributes="Bold" 
+									      Text="{Binding Name}"/>
+                                <Label HorizontalOptions="Start" FontSize="12" FontAttributes="Bold" 
+									       Text="{Binding Continent}"/>
+                            </StackLayout>
+                            <StackLayout HorizontalOptions="EndAndExpand" Orientation="Horizontal" WidthRequest="260">
+                                <Button x:Name="MoreButton" Text="Find out more" HorizontalOptions="EndAndExpand" 
+									      Clicked="MoreButton_Clicked" CommandParameter="{Binding .}"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+   </StackLayout>
+</ContentPage>

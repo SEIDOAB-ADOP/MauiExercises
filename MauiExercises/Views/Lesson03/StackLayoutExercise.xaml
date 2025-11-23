@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+x:Class="MauiExercises.Views.Lesson03.StackLayoutExercise"
+Title="StackLayout Demo - XAML">
+	
+    <ContentPage.Content>
+        <StackLayout Spacing="10">
+            <BoxView Color="Yellow" HeightRequest ="50"/>
+            <BoxView Color="Green" HeightRequest ="50"/>
+            <StackLayout>
+                <BoxView Color="Blue" />
+                <BoxView Color="Aqua" />
+            </StackLayout>
+            <BoxView Color="Bisque" HeightRequest ="50"/>
+            <StackLayout HeightRequest="200" Spacing="50" Orientation="Horizontal" HorizontalOptions="Center">
+                <StackLayout Orientation="Horizontal" Spacing="20">
+                    <BoxView Color="DarkSalmon" HeightRequest ="50" WidthRequest="200" />
+                    <BoxView Color="LightCoral" HeightRequest ="50" WidthRequest="200" />
+                    <BoxView Color="Fuchsia" HeightRequest ="50" WidthRequest="200" />
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical" >
+                    <BoxView Color="LightBlue" HeightRequest ="50"/>
+                    <BoxView Color="LightPink" HeightRequest ="50"/>
+                    <BoxView Color="SaddleBrown" HeightRequest ="50"/>
+                    <BoxView Color="DeepPink" HeightRequest ="50"/>
+                </StackLayout>
+            </StackLayout>
+         </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

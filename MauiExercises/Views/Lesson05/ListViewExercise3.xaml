@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+				x:Class="MauiExercises.Views.Lesson05.ListViewExercise3"
+				Padding="20"
+                Title="ListViewExercise3">
+    <StackLayout>
+        <ListView x:Name="ButtonList" RowHeight="100" HasUnevenRows="true" ItemTapped="ButtonList_ItemTapped" >
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<ViewCell>
+						<StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal" Padding="5,10,5,15">
+                            <StackLayout HorizontalOptions="Start" Orientation="Vertical" Padding="3">
+                                <Image Source="{Binding ImageSrc}" HorizontalOptions="FillAndExpand" WidthRequest="100"/>
+                            </StackLayout>
+                            <StackLayout HorizontalOptions="Start" Orientation="Vertical">
+								<Label HorizontalOptions="Start" FontSize="20" FontAttributes="Bold" 
+									  Text="{Binding Name}"/>
+								<Label HorizontalOptions="Start" FontSize="12" FontAttributes="Bold" 
+									   Text="{Binding Continent}"/>	 
+							</StackLayout>
+							<StackLayout HorizontalOptions="EndAndExpand" Orientation="Horizontal" WidthRequest="260">
+								<Button x:Name="MoreButton" Text="Find out more" HorizontalOptions="EndAndExpand" 
+									 Clicked="MoreButton_Clicked" CommandParameter="{Binding .}"/>
+							</StackLayout>
+						</StackLayout>
+					</ViewCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+        <Border Margin="5" Padding="20" Stroke="#C49B33" StrokeThickness="4">
+            <StackLayout>
+                <Button Text="ListView4" Clicked="Button_Clicked" />
+                <Button Text="ListView2" Clicked="Button_Clicked_1" />
+            </StackLayout>
+        </Border>
+    </StackLayout>
+</ContentPage>
