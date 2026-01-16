@@ -7,7 +7,7 @@
     <ScrollView>
     <StackLayout Spacing="30">
         <Border Margin="5" Padding="20" Stroke="#C49B33" StrokeThickness="4" HeightRequest="200">
-                <ListView ItemsSource="{Binding myFriends}">
+        <ListView ItemsSource="{Binding MyFriends}">
 		    <ListView.ItemTemplate>
 			    <DataTemplate>
 				    <TextCell Text="{Binding FullName}" Detail="{Binding FavoriteColor.FriendlyName}"/>
@@ -17,7 +17,7 @@
         </Border>
 
         <Border Margin="5" Padding="20" Stroke="#C49B33" StrokeThickness="4" HeightRequest="100">
-            <ListView x:Name="lvCities">
+        <ListView ItemsSource="{Binding MyCities}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <TextCell Text="{Binding Name}" Detail="{Binding Continent}"/>
@@ -27,7 +27,7 @@
         </Border>
 
         <Border Margin="5" Padding="20" Stroke="#C49B33" StrokeThickness="4" HeightRequest="100">
-            <ListView x:Name="lvColors">
+        <ListView ItemsSource="{Binding MyColors}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <TextCell Text="{Binding FriendlyName}"/>
