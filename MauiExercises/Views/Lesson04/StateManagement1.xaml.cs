@@ -21,6 +21,12 @@ namespace MauiExercises.Views.Lesson04
             var startTime = Global.Data.Time;
 
         }
+
+        //Exercise modify the Globals lazy added lists
+        //a.	list of friends who’s favorite color contains the word “Blue”
+        //b.	list of cities in Africa
+        //c.	list of named colors with a friendly name that contain the word “Red”  
+
     }
 }
 
