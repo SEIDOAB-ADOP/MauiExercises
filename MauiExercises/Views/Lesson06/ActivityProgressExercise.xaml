@@ -4,31 +4,29 @@
              xmlns:models="clr-namespace:MauiExercises.Models"
              x:Class="MauiExercises.Views.Lesson06.ActivityProgressExercise">
     <ContentPage.Content>
-        <StackLayout>
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                <Label BindingContext="{x:Static models:PrimeBatch.BatchSize}" 
+            <StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Label BindingContext="{x:Static models:PrimeBatch.BatchSize}" 
                        Text ="{Binding Path=., StringFormat='Number of {0:N0} batches:'}" 
                        VerticalOptions="CenterAndExpand" HorizontalOptions="Center" />
-                <Entry x:Name="enNrBatches" Placeholder="" HorizontalOptions="Start" />
-                <Button Text="Get primes" Clicked="Button_Clicked" HorizontalOptions="Start" />
-            </StackLayout>
-            <StackLayout Orientation="Vertical" HorizontalOptions="Center" HeightRequest="200" x:Name="layBusy" IsVisible="False">
-                <ProgressBar x:Name="progressBar1" WidthRequest="500" ProgressColor="Orange" 
+                    <Entry x:Name="enNrBatches" Placeholder="" HorizontalOptions="Start" />
+                    <Button Text="Get primes" Clicked="Button_Clicked" HorizontalOptions="Start" />
+                </StackLayout>
+                <StackLayout Orientation="Vertical" HorizontalOptions="Center" HeightRequest="200" x:Name="layBusy" IsVisible="False">
+                    <ProgressBar x:Name="progressBar1" WidthRequest="500" ProgressColor="Orange" 
                          VerticalOptions="CenterAndExpand" HorizontalOptions="Fill" Scale="2" />
-                <ProgressBar x:Name="progressBar2" WidthRequest="500" ProgressColor="Orange" 
+                    <ProgressBar x:Name="progressBar2" WidthRequest="500" ProgressColor="Orange" 
                          VerticalOptions="CenterAndExpand" HorizontalOptions="Fill" Scale="2" />
-                <ActivityIndicator x:Name="activityIndicator" Color="Red"
+                    <ActivityIndicator x:Name="activityIndicator" Color="Red"
                                VerticalOptions="CenterAndExpand" HorizontalOptions="Fill" Scale="2"/>
-            </StackLayout>
-            <StackLayout>
-                <ListView x:Name="lvPrimes">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
+                </StackLayout>
+                    <ListView x:Name="lvPrimes">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
                                 <TextCell Text="{Binding .}" Detail="  " />
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
             </StackLayout>
-        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
